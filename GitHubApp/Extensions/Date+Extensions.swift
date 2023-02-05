@@ -16,8 +16,7 @@ extension Date {
     func travelToFuture(years: Int) -> String? {
         
         let calendar = Calendar.current
-        let currentDate = Date()
-        var futureDate = calendar.date(byAdding: .year, value: years, to: currentDate)!
+        let futureDate = calendar.date(byAdding: .year, value: years, to: self)!
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
